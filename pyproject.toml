@@ -6,6 +6,8 @@ authors = ["Tolstikov Maksim <tolstikov_m@mail.ru>"]
 
 [tool.poetry.dependencies]
 python = "3.9.5"
+celery = "^5.2.3"
+redis = "^4.1.4"
 
 [tool.poetry.dev-dependencies]
 
