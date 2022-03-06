@@ -1,0 +1,677 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": false,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 1,
+    "iteration": 1646568887931,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "grafana-clickhouse-datasource",
+          "uid": "PDEE91DDB90597936"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "number"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-green",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom"
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "grafana-clickhouse-datasource",
+              "uid": "PDEE91DDB90597936"
+            },
+            "format": 1,
+            "meta": {
+              "builderOptions": {
+                "fields": [],
+                "limit": 100,
+                "mode": "list"
+              }
+            },
+            "queryType": "sql",
+            "rawSql": "SELECT datetime, name, price FROM db_name.tracks WHERE name = '${name}' LIMIT 10000",
+            "refId": "A"
+          }
+        ],
+        "title": "Price changes",
+        "type": "timeseries"
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 35,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "selected": true,
+            "text": "track_00",
+            "value": "track_00"
+          },
+          "hide": 0,
+          "includeAll": false,
+          "label": "Track",
+          "multi": false,
+          "name": "name",
+          "options": [
+            {
+              "selected": true,
+              "text": "track_00",
+              "value": "track_00"
+            },
+            {
+              "selected": false,
+              "text": "track_01",
+              "value": "track_01"
+            },
+            {
+              "selected": false,
+              "text": "track_02",
+              "value": "track_02"
+            },
+            {
+              "selected": false,
+              "text": "track_03",
+              "value": "track_03"
+            },
+            {
+              "selected": false,
+              "text": "track_04",
+              "value": "track_04"
+            },
+            {
+              "selected": false,
+              "text": "track_05",
+              "value": "track_05"
+            },
+            {
+              "selected": false,
+              "text": "track_06",
+              "value": "track_06"
+            },
+            {
+              "selected": false,
+              "text": "track_07",
+              "value": "track_07"
+            },
+            {
+              "selected": false,
+              "text": "track_08",
+              "value": "track_08"
+            },
+            {
+              "selected": false,
+              "text": "track_09",
+              "value": "track_09"
+            },
+            {
+              "selected": false,
+              "text": "track_10",
+              "value": "track_10"
+            },
+            {
+              "selected": false,
+              "text": "track_11",
+              "value": "track_11"
+            },
+            {
+              "selected": false,
+              "text": "track_12",
+              "value": "track_12"
+            },
+            {
+              "selected": false,
+              "text": "track_13",
+              "value": "track_13"
+            },
+            {
+              "selected": false,
+              "text": "track_14",
+              "value": "track_14"
+            },
+            {
+              "selected": false,
+              "text": "track_15",
+              "value": "track_15"
+            },
+            {
+              "selected": false,
+              "text": "track_16",
+              "value": "track_16"
+            },
+            {
+              "selected": false,
+              "text": "track_17",
+              "value": "track_17"
+            },
+            {
+              "selected": false,
+              "text": "track_18",
+              "value": "track_18"
+            },
+            {
+              "selected": false,
+              "text": "track_19",
+              "value": "track_19"
+            },
+            {
+              "selected": false,
+              "text": "track_20",
+              "value": "track_20"
+            },
+            {
+              "selected": false,
+              "text": "track_21",
+              "value": "track_21"
+            },
+            {
+              "selected": false,
+              "text": "track_22",
+              "value": "track_22"
+            },
+            {
+              "selected": false,
+              "text": "track_23",
+              "value": "track_23"
+            },
+            {
+              "selected": false,
+              "text": "track_24",
+              "value": "track_24"
+            },
+            {
+              "selected": false,
+              "text": "track_25",
+              "value": "track_25"
+            },
+            {
+              "selected": false,
+              "text": "track_26",
+              "value": "track_26"
+            },
+            {
+              "selected": false,
+              "text": "track_27",
+              "value": "track_27"
+            },
+            {
+              "selected": false,
+              "text": "track_28",
+              "value": "track_28"
+            },
+            {
+              "selected": false,
+              "text": "track_29",
+              "value": "track_29"
+            },
+            {
+              "selected": false,
+              "text": "track_30",
+              "value": "track_30"
+            },
+            {
+              "selected": false,
+              "text": "track_31",
+              "value": "track_31"
+            },
+            {
+              "selected": false,
+              "text": "track_32",
+              "value": "track_32"
+            },
+            {
+              "selected": false,
+              "text": "track_33",
+              "value": "track_33"
+            },
+            {
+              "selected": false,
+              "text": "track_34",
+              "value": "track_34"
+            },
+            {
+              "selected": false,
+              "text": "track_35",
+              "value": "track_35"
+            },
+            {
+              "selected": false,
+              "text": "track_36",
+              "value": "track_36"
+            },
+            {
+              "selected": false,
+              "text": "track_37",
+              "value": "track_37"
+            },
+            {
+              "selected": false,
+              "text": "track_38",
+              "value": "track_38"
+            },
+            {
+              "selected": false,
+              "text": "track_39",
+              "value": "track_39"
+            },
+            {
+              "selected": false,
+              "text": "track_40",
+              "value": "track_40"
+            },
+            {
+              "selected": false,
+              "text": "track_41",
+              "value": "track_41"
+            },
+            {
+              "selected": false,
+              "text": "track_42",
+              "value": "track_42"
+            },
+            {
+              "selected": false,
+              "text": "track_43",
+              "value": "track_43"
+            },
+            {
+              "selected": false,
+              "text": "track_44",
+              "value": "track_44"
+            },
+            {
+              "selected": false,
+              "text": "track_45",
+              "value": "track_45"
+            },
+            {
+              "selected": false,
+              "text": "track_46",
+              "value": "track_46"
+            },
+            {
+              "selected": false,
+              "text": "track_47",
+              "value": "track_47"
+            },
+            {
+              "selected": false,
+              "text": "track_48",
+              "value": "track_48"
+            },
+            {
+              "selected": false,
+              "text": "track_49",
+              "value": "track_49"
+            },
+            {
+              "selected": false,
+              "text": "track_50",
+              "value": "track_50"
+            },
+            {
+              "selected": false,
+              "text": "track_51",
+              "value": "track_51"
+            },
+            {
+              "selected": false,
+              "text": "track_52",
+              "value": "track_52"
+            },
+            {
+              "selected": false,
+              "text": "track_53",
+              "value": "track_53"
+            },
+            {
+              "selected": false,
+              "text": "track_54",
+              "value": "track_54"
+            },
+            {
+              "selected": false,
+              "text": "track_55",
+              "value": "track_55"
+            },
+            {
+              "selected": false,
+              "text": "track_56",
+              "value": "track_56"
+            },
+            {
+              "selected": false,
+              "text": "track_57",
+              "value": "track_57"
+            },
+            {
+              "selected": false,
+              "text": "track_58",
+              "value": "track_58"
+            },
+            {
+              "selected": false,
+              "text": "track_59",
+              "value": "track_59"
+            },
+            {
+              "selected": false,
+              "text": "track_60",
+              "value": "track_60"
+            },
+            {
+              "selected": false,
+              "text": "track_61",
+              "value": "track_61"
+            },
+            {
+              "selected": false,
+              "text": "track_62",
+              "value": "track_62"
+            },
+            {
+              "selected": false,
+              "text": "track_63",
+              "value": "track_63"
+            },
+            {
+              "selected": false,
+              "text": "track_64",
+              "value": "track_64"
+            },
+            {
+              "selected": false,
+              "text": "track_65",
+              "value": "track_65"
+            },
+            {
+              "selected": false,
+              "text": "track_66",
+              "value": "track_66"
+            },
+            {
+              "selected": false,
+              "text": "track_67",
+              "value": "track_67"
+            },
+            {
+              "selected": false,
+              "text": "track_68",
+              "value": "track_68"
+            },
+            {
+              "selected": false,
+              "text": "track_69",
+              "value": "track_69"
+            },
+            {
+              "selected": false,
+              "text": "track_70",
+              "value": "track_70"
+            },
+            {
+              "selected": false,
+              "text": "track_71",
+              "value": "track_71"
+            },
+            {
+              "selected": false,
+              "text": "track_72",
+              "value": "track_72"
+            },
+            {
+              "selected": false,
+              "text": "track_73",
+              "value": "track_73"
+            },
+            {
+              "selected": false,
+              "text": "track_74",
+              "value": "track_74"
+            },
+            {
+              "selected": false,
+              "text": "track_75",
+              "value": "track_75"
+            },
+            {
+              "selected": false,
+              "text": "track_76",
+              "value": "track_76"
+            },
+            {
+              "selected": false,
+              "text": "track_77",
+              "value": "track_77"
+            },
+            {
+              "selected": false,
+              "text": "track_78",
+              "value": "track_78"
+            },
+            {
+              "selected": false,
+              "text": "track_79",
+              "value": "track_79"
+            },
+            {
+              "selected": false,
+              "text": "track_80",
+              "value": "track_80"
+            },
+            {
+              "selected": false,
+              "text": "track_81",
+              "value": "track_81"
+            },
+            {
+              "selected": false,
+              "text": "track_82",
+              "value": "track_82"
+            },
+            {
+              "selected": false,
+              "text": "track_83",
+              "value": "track_83"
+            },
+            {
+              "selected": false,
+              "text": "track_84",
+              "value": "track_84"
+            },
+            {
+              "selected": false,
+              "text": "track_85",
+              "value": "track_85"
+            },
+            {
+              "selected": false,
+              "text": "track_86",
+              "value": "track_86"
+            },
+            {
+              "selected": false,
+              "text": "track_87",
+              "value": "track_87"
+            },
+            {
+              "selected": false,
+              "text": "track_88",
+              "value": "track_88"
+            },
+            {
+              "selected": false,
+              "text": "track_89",
+              "value": "track_89"
+            },
+            {
+              "selected": false,
+              "text": "track_90",
+              "value": "track_90"
+            },
+            {
+              "selected": false,
+              "text": "track_91",
+              "value": "track_91"
+            },
+            {
+              "selected": false,
+              "text": "track_92",
+              "value": "track_92"
+            },
+            {
+              "selected": false,
+              "text": "track_93",
+              "value": "track_93"
+            },
+            {
+              "selected": false,
+              "text": "track_94",
+              "value": "track_94"
+            },
+            {
+              "selected": false,
+              "text": "track_95",
+              "value": "track_95"
+            },
+            {
+              "selected": false,
+              "text": "track_96",
+              "value": "track_96"
+            },
+            {
+              "selected": false,
+              "text": "track_97",
+              "value": "track_97"
+            },
+            {
+              "selected": false,
+              "text": "track_98",
+              "value": "track_98"
+            },
+            {
+              "selected": false,
+              "text": "track_99",
+              "value": "track_99"
+            }
+          ],
+          "query": "track_00,track_01,track_02,track_03,track_04,track_05,track_06,track_07,track_08,track_09,track_10,track_11,track_12,track_13,track_14,track_15,track_16,track_17,track_18,track_19,track_20,track_21,track_22,track_23,track_24,track_25,track_26,track_27,track_28,track_29,track_30,track_31,track_32,track_33,track_34,track_35,track_36,track_37,track_38,track_39,track_40,track_41,track_42,track_43,track_44,track_45,track_46,track_47,track_48,track_49,track_50,track_51,track_52,track_53,track_54,track_55,track_56,track_57,track_58,track_59,track_60,track_61,track_62,track_63,track_64,track_65,track_66,track_67,track_68,track_69,track_70,track_71,track_72,track_73,track_74,track_75,track_76,track_77,track_78,track_79,track_80,track_81,track_82,track_83,track_84,track_85,track_86,track_87,track_88,track_89,track_90,track_91,track_92,track_93,track_94,track_95,track_96,track_97,track_98,track_99",
+          "queryValue": "",
+          "skipUrlSync": false,
+          "type": "custom"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Tracks",
+    "uid": "liAo9JY7z",
+    "version": 7,
+    "weekStart": ""
+}

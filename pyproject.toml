@@ -6,8 +6,8 @@ authors = ["Tolstikov Maksim <tolstikov_m@mail.ru>"]
 
 [tool.poetry.dependencies]
 python = "3.9.5"
-celery = "^5.2.3"
-redis = "^4.1.4"
+APScheduler = "^3.9.1"
+clickhouse-driver = "^0.2.3"
 
 [tool.poetry.dev-dependencies]
 
