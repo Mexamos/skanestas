@@ -11,10 +11,11 @@ scheduler.add_job(
     seconds=1,
 )
 
-try:
-    init_db()
-    scheduler.start()
-except KeyboardInterrupt:
-    print('Scheduler manually stopped')
-finally:
-    scheduler.shutdown()
+if __name__ == '__main__':
+    try:
+        init_db()
+        scheduler.start()
+    except KeyboardInterrupt:
+        print('Scheduler manually stopped')
+    finally:
+        scheduler.shutdown()

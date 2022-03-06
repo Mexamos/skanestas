@@ -37,13 +37,13 @@ def init_db() -> None:
 def get_latest_tracks_prices() -> List[Tuple[str, int]]:
     rows = clickhouse_client.execute(
         f'''
-            SELECT t1.name, t1.price
-            FROM {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE} t1
-            INNER JOIN (
-                SELECT name, max(datetime) as latest_date
-                FROM {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE}
-                GROUP BY name
-            ) t2 ON t1.name = t2.name AND t1.datetime = t2.latest_date ORDER BY name
+            SELECT name, price FROM {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE}
+            WHERE (name, datetime) IN 
+            (
+                SELECT name, max(datetime)
+                FROM {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE} GROUP BY name
+            )
+
         '''
     )
     return rows
